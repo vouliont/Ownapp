@@ -21,10 +21,16 @@ class ContainerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initView()
+    }
+    
+    func initView() {
         sidebarMenuVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sidebarMenuVC") as? SidebarMenuVC
         view.addSubview(sidebarMenuVC.view)
         addChild(sidebarMenuVC)
         sidebarMenuVC.didMove(toParent: self)
+        sidebarMenuVC.delegate = self
+        sidebarMenuVC.menuView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         
         currentNavVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavVC") as? UINavigationController
         view.addSubview(currentNavVC.view)
@@ -33,7 +39,6 @@ class ContainerVC: UIViewController {
         
         currentVC = currentNavVC.viewControllers.first as? NavRootVC
         currentVC.delegate = self
-        
     }
 
 }
@@ -60,5 +65,33 @@ extension ContainerVC: NavRootVCDelegate {
                         self.currentNavVC.view.frame.origin.x = targetPosition
                         self.currentNavVC.view.layer.shadowOpacity = 2
         }, completion: nil)
+    }
+}
+
+extension ContainerVC: SidebarMenuVCDelegate {
+    func selectedItem() {
+        let selectedItemId = DataService.instance.selectedItem.vcId
+        
+        removeNavVC()
+        addNewNavVC(withId: selectedItemId!)
+
+        currentVC = currentNavVC.viewControllers.first as? NavRootVC
+        currentVC.delegate = self
+
+        toggleSidebarMenu()
+    }
+    
+    func removeNavVC() {
+        currentNavVC.view.removeFromSuperview()
+        currentNavVC.removeFromParent()
+    }
+    
+    func addNewNavVC(withId itemId: String) {
+        currentNavVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: itemId) as? UINavigationController
+        currentNavVC.view.frame.origin.x = currentNavVC.view.frame.size.width - 60
+        currentNavVC.view.layer.shadowOpacity = 2
+        self.view.addSubview(currentNavVC.view)
+        self.addChild(currentNavVC)
+        currentNavVC.didMove(toParent: self)
     }
 }

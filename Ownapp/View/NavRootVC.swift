@@ -15,12 +15,12 @@ class NavRootVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
     func setupView() {
         setBarButton()
-        setBarTitle()
+        
     }
     
     func setBarButton() {
@@ -29,10 +29,6 @@ class NavRootVC: UIViewController {
         barBtn.tintColor = UIColor.black
         
         self.navigationItem.setLeftBarButton(barBtn, animated: true)
-    }
-    
-    func setBarTitle() {
-        
     }
     
     @objc func barBtnPressed() {

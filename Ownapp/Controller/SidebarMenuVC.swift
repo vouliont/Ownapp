@@ -13,6 +13,9 @@ class SidebarMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     // Outlets
     @IBOutlet weak var menuView: UITableView!
     
+    // Variables
+    var delegate: SidebarMenuVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +40,12 @@ class SidebarMenuVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         
         return MenuItemCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DataService.instance.selectedItem = DataService.instance.getMenuItems()[indexPath.row]
+        
+        delegate?.selectedItem?()
     }
 
 }

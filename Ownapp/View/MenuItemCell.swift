@@ -16,7 +16,11 @@ class MenuItemCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            self.layer.backgroundColor = UIColor.init(white: 0.3, alpha: 0.2).cgColor
+        } else {
+            self.layer.backgroundColor = UIColor.clear.cgColor
+        }
     }
     
     func setupView(menuItem: MenuItem) {

@@ -19,6 +19,8 @@
 		2C9F17D52201E57A007A1E6E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17D42201E57A007A1E6E /* HomeVC.swift */; };
 		2C9F17D92201E773007A1E6E /* NavRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17D82201E773007A1E6E /* NavRootVC.swift */; };
 		2C9F17DB2201EBDA007A1E6E /* NavRootVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */; };
+		2C9F17DD2201F98C007A1E6E /* SidebarMenuVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DC2201F98C007A1E6E /* SidebarMenuVCDelegate.swift */; };
+		2C9F17DF2201FBF7007A1E6E /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DE2201FBF7007A1E6E /* WeatherVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2C9F17D42201E57A007A1E6E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2C9F17D82201E773007A1E6E /* NavRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRootVC.swift; sourceTree = "<group>"; };
 		2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRootVCDelegate.swift; sourceTree = "<group>"; };
+		2C9F17DC2201F98C007A1E6E /* SidebarMenuVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMenuVCDelegate.swift; sourceTree = "<group>"; };
+		2C9F17DE2201FBF7007A1E6E /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		2C79A3662200971F004D9C5A /* Ownapp */ = {
 			isa = PBXGroup;
 			children = (
+				2C9F17E02201FC1E007A1E6E /* Delegates */,
 				2C79A3822200C317004D9C5A /* Services */,
 				2C79A37B22009778004D9C5A /* Model */,
 				2C79A37A2200976F004D9C5A /* View */,
@@ -87,7 +92,7 @@
 				2C79A3802200C2B6004D9C5A /* SidebarMenuVC.swift */,
 				2C79A3872200E3EB004D9C5A /* ContainerVC.swift */,
 				2C9F17D42201E57A007A1E6E /* HomeVC.swift */,
-				2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */,
+				2C9F17DE2201FBF7007A1E6E /* WeatherVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +120,15 @@
 				2C79A3832200C32B004D9C5A /* DataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2C9F17E02201FC1E007A1E6E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */,
+				2C9F17DC2201F98C007A1E6E /* SidebarMenuVCDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 			files = (
 				2C79A3842200C32B004D9C5A /* DataService.swift in Sources */,
 				2C9F17D92201E773007A1E6E /* NavRootVC.swift in Sources */,
+				2C9F17DF2201FBF7007A1E6E /* WeatherVC.swift in Sources */,
 				2C9F17D52201E57A007A1E6E /* HomeVC.swift in Sources */,
 				2C79A3862200C6AB004D9C5A /* MenuItemCell.swift in Sources */,
 				2C9F17DB2201EBDA007A1E6E /* NavRootVCDelegate.swift in Sources */,
@@ -197,6 +212,7 @@
 				2C79A38A2200E417004D9C5A /* MenuItem.swift in Sources */,
 				2C79A3682200971F004D9C5A /* AppDelegate.swift in Sources */,
 				2C79A3882200E3EB004D9C5A /* ContainerVC.swift in Sources */,
+				2C9F17DD2201F98C007A1E6E /* SidebarMenuVCDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

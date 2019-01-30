@@ -11,11 +11,13 @@ import Foundation
 class DataService {
     static let instance = DataService()
     
+    var selectedItem: MenuItem!
+    
     let menuItems: [MenuItem] = [
         MenuItem(name: "Home", vcId: "homeNavVC"),
-        MenuItem(name: "About", vcId: "aboutNavVC"),
-        MenuItem(name: "Photos", vcId: "photosNavVC"),
-        MenuItem(name: "Map", vcId: "mapNavVC")
+        MenuItem(name: "Weather", vcId: "weatherNavVC"),
+//        MenuItem(name: "Photos", vcId: "photosNavVC"),
+//        MenuItem(name: "Map", vcId: "mapNavVC")
     ]
     
     func getMenuItems() -> [MenuItem] {

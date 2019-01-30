@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="27"/>
+            <point key="canvasLocation" x="-89" y="29"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="pKG-Ij-vs8">
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ims-BM-Vkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="27"/>
+            <point key="canvasLocation" x="1553" y="-1113"/>
         </scene>
         <!--Sidebar MenuVC-->
         <scene sceneID="0EI-Bd-KNd">
@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.158615757" blue="0.30774097709999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuItemCell" rowHeight="50" id="TSB-WW-9pT" customClass="MenuItemCell" customModule="Ownapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuItemCell" rowHeight="50" id="TSB-WW-9pT" customClass="MenuItemCell" customModule="Ownapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TSB-WW-9pT" id="cqY-Au-UDD">
@@ -78,7 +78,7 @@
                                                 <constraint firstItem="K1k-HZ-hus" firstAttribute="centerY" secondItem="cqY-Au-UDD" secondAttribute="centerY" id="nil-yq-C5E"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.72859815141971818" green="0.73880391728873251" blue="0.91931668135633815" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="menuItemLbl" destination="K1k-HZ-hus" id="lWe-Ue-ek9"/>
                                         </connections>
@@ -103,7 +103,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5V-B2-H8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42.399999999999999" y="735.38230884557731"/>
+            <point key="canvasLocation" x="-87" y="738"/>
+        </scene>
+        <!--WeatherVC-->
+        <scene sceneID="Q1A-YH-znt">
+            <objects>
+                <viewController storyboardIdentifier="weatherVC" id="G3V-ZW-YKT" customClass="WeatherVC" customModule="Ownapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7W-TG-RNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Umm-32-vDO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CEA-vb-dVi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kc-u2-Ia0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="-380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AOL-AS-co5">
@@ -121,7 +137,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lG-Vs-u0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="27"/>
+            <point key="canvasLocation" x="785" y="-1113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4FH-ko-9Qd">
+            <objects>
+                <navigationController storyboardIdentifier="weatherNavVC" automaticallyAdjustsScrollViewInsets="NO" id="phv-3f-uVw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JDg-bS-S6Y">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G3V-ZW-YKT" kind="relationship" relationship="rootViewController" id="Xda-rP-b33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHL-2H-4GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="-380.05997001499253"/>
         </scene>
     </scenes>
 </document>

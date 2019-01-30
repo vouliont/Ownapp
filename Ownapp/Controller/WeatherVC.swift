@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  WeatherVC.swift
 //  Ownapp
 //
 //  Created by Владислав on 1/30/19.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class HomeVC: NavRootVC {
+class WeatherVC: NavRootVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  SidebarMenuVCDelegate.swift
 //  Ownapp
 //
 //  Created by Владислав on 1/30/19.
@@ -8,11 +8,7 @@
 
 import UIKit
 
-class HomeVC: NavRootVC {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
+@objc
+protocol SidebarMenuVCDelegate {
+    @objc optional func selectedItem()
 }
