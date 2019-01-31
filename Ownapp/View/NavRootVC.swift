@@ -20,7 +20,6 @@ class NavRootVC: UIViewController {
     
     func setupView() {
         setBarButton()
-        
     }
     
     func setBarButton() {

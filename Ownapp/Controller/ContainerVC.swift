@@ -17,6 +17,8 @@ class ContainerVC: UIViewController {
     var sidebarMenuIsOpened = false
     
     var barButton: UIBarButtonItem!
+    
+    var viewControllers: [String: UINavigationController] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +34,9 @@ class ContainerVC: UIViewController {
         sidebarMenuVC.delegate = self
         sidebarMenuVC.menuView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         
-        currentNavVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeNavVC") as? UINavigationController
-        view.addSubview(currentNavVC.view)
-        addChild(currentNavVC)
-        currentNavVC.didMove(toParent: self)
-        
-        currentVC = currentNavVC.viewControllers.first as? NavRootVC
-        currentVC.delegate = self
+        if let id = DataService.instance.getMenuItems().first?.vcId {
+            selectItem(with: id)
+        }
     }
 
 }
@@ -69,29 +67,35 @@ extension ContainerVC: NavRootVCDelegate {
 }
 
 extension ContainerVC: SidebarMenuVCDelegate {
-    func selectedItem() {
-        let selectedItemId = DataService.instance.selectedItem.vcId
+    func selectedItem() { // todo pass here argument
+        selectItem(with: DataService.instance.selectedItem.vcId)
         
-        removeNavVC()
-        addNewNavVC(withId: selectedItemId!)
-
-        currentVC = currentNavVC.viewControllers.first as? NavRootVC
-        currentVC.delegate = self
-
         toggleSidebarMenu()
     }
     
+    private func selectItem(with id: String) {
+        removeNavVC()
+        addNewNavVC(withId: id)
+        
+        currentVC = currentNavVC.viewControllers.first as? NavRootVC
+        currentVC.delegate = self
+    }
+    
     func removeNavVC() {
+        guard currentNavVC != nil else { return }
         currentNavVC.view.removeFromSuperview()
         currentNavVC.removeFromParent()
     }
     
     func addNewNavVC(withId itemId: String) {
-        currentNavVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: itemId) as? UINavigationController
-        currentNavVC.view.frame.origin.x = currentNavVC.view.frame.size.width - 60
-        currentNavVC.view.layer.shadowOpacity = 2
-        self.view.addSubview(currentNavVC.view)
-        self.addChild(currentNavVC)
-        currentNavVC.didMove(toParent: self)
+        currentNavVC = viewControllers[itemId] ?? UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: itemId) as? UINavigationController
+        self.viewControllers[itemId] = self.currentNavVC
+        if self.viewControllers.count != 1 {
+            self.currentNavVC.view.frame.origin.x = self.currentNavVC.view.frame.size.width - 60
+            self.currentNavVC.view.layer.shadowOpacity = 2
+        }
+        self.addChild(self.currentNavVC)
+        self.view.addSubview(self.currentNavVC.view)
+        self.currentNavVC.didMove(toParent: self)
     }
 }
