@@ -34,8 +34,9 @@ class ContainerVC: UIViewController {
         sidebarMenuVC.delegate = self
         sidebarMenuVC.menuView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
         
-        if let id = DataService.instance.getMenuItems().first?.vcId {
-            selectItem(with: id)
+        if let menuItem = DataService.instance.getMenuItems().first {
+            selectItem(with: menuItem.vcId)
+            DataService.instance.selectedItem = menuItem
         }
     }
 
@@ -51,6 +52,12 @@ extension ContainerVC: NavRootVCDelegate {
         }
         
         sidebarMenuIsOpened = !sidebarMenuIsOpened
+    }
+    
+    func closeSidebarMenu() {
+        animateCurrentNavVCXPosition(targetPosition: 0)
+        
+        sidebarMenuIsOpened = false
     }
     
     func animateCurrentNavVCXPosition(targetPosition: CGFloat) {

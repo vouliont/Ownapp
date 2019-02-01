@@ -20,6 +20,9 @@ class NavRootVC: UIViewController {
     
     func setupView() {
         setBarButton()
+        setGestureRecognizers()
+        
+        self.title = DataService.instance.selectedItem.name
     }
     
     func setBarButton() {
@@ -30,8 +33,17 @@ class NavRootVC: UIViewController {
         self.navigationItem.setLeftBarButton(barBtn, animated: true)
     }
     
+    func setGestureRecognizers() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnView))
+        self.view.addGestureRecognizer(tap)
+    }
+    
     @objc func barBtnPressed() {
         delegate?.toggleSidebarMenu?()
+    }
+    
+    @objc func tapOnView() {
+        delegate?.closeSidebarMenu?()
     }
 
 }

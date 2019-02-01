@@ -11,4 +11,5 @@ import UIKit
 @objc
 protocol NavRootVCDelegate {
     @objc optional func toggleSidebarMenu()
+    @objc optional func closeSidebarMenu()
 }

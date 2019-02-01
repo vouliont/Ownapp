@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BA57890A72F50973B4BDF18 /* Pods_Ownapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C5D03CA112402683727D18 /* Pods_Ownapp.framework */; };
 		2C79A3682200971F004D9C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79A3672200971F004D9C5A /* AppDelegate.swift */; };
 		2C79A36D22009720004D9C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C79A36B22009720004D9C5A /* Main.storyboard */; };
 		2C79A36F22009722004D9C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C79A36E22009722004D9C5A /* Assets.xcassets */; };
@@ -21,9 +22,14 @@
 		2C9F17DB2201EBDA007A1E6E /* NavRootVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */; };
 		2C9F17DD2201F98C007A1E6E /* SidebarMenuVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DC2201F98C007A1E6E /* SidebarMenuVCDelegate.swift */; };
 		2C9F17DF2201FBF7007A1E6E /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F17DE2201FBF7007A1E6E /* WeatherVC.swift */; };
+		2CD0FBCD22034B65005C5296 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0FBCC22034B65005C5296 /* DroppablePin.swift */; };
+		2CD0FBD1220398C5005C5296 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0FBD0220398C5005C5296 /* WeatherView.swift */; };
+		2CD0FBD422039CC9005C5296 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0FBD322039CC9005C5296 /* Constants.swift */; };
+		2CD0FBD622045542005C5296 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0FBD522045542005C5296 /* BorderedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C5D03CA112402683727D18 /* Pods_Ownapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ownapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79A3642200971F004D9C5A /* Ownapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ownapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79A3672200971F004D9C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C79A36C22009720004D9C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +46,12 @@
 		2C9F17DA2201EBDA007A1E6E /* NavRootVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRootVCDelegate.swift; sourceTree = "<group>"; };
 		2C9F17DC2201F98C007A1E6E /* SidebarMenuVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMenuVCDelegate.swift; sourceTree = "<group>"; };
 		2C9F17DE2201FBF7007A1E6E /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		2CD0FBCC22034B65005C5296 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
+		2CD0FBD0220398C5005C5296 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		2CD0FBD322039CC9005C5296 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CD0FBD522045542005C5296 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		C74423D2353AF9CB1D0BE907 /* Pods-Ownapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ownapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ownapp/Pods-Ownapp.release.xcconfig"; sourceTree = "<group>"; };
+		DFB26A0C832BAC8D72DAA414 /* Pods-Ownapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ownapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ownapp/Pods-Ownapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA57890A72F50973B4BDF18 /* Pods_Ownapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,8 @@
 			children = (
 				2C79A3662200971F004D9C5A /* Ownapp */,
 				2C79A3652200971F004D9C5A /* Products */,
+				E77C10E9B57E746241D8634D /* Pods */,
+				C935BC3CD81A573DD19C1FC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +87,7 @@
 		2C79A3662200971F004D9C5A /* Ownapp */ = {
 			isa = PBXGroup;
 			children = (
+				2CD0FBD222039CA8005C5296 /* Utilities */,
 				2C9F17E02201FC1E007A1E6E /* Delegates */,
 				2C79A3822200C317004D9C5A /* Services */,
 				2C79A37B22009778004D9C5A /* Model */,
@@ -102,6 +118,9 @@
 			children = (
 				2C79A3852200C6AB004D9C5A /* MenuItemCell.swift */,
 				2C9F17D82201E773007A1E6E /* NavRootVC.swift */,
+				2CD0FBCC22034B65005C5296 /* DroppablePin.swift */,
+				2CD0FBD0220398C5005C5296 /* WeatherView.swift */,
+				2CD0FBD522045542005C5296 /* BorderedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +150,31 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		2CD0FBD222039CA8005C5296 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2CD0FBD322039CC9005C5296 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C935BC3CD81A573DD19C1FC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C5D03CA112402683727D18 /* Pods_Ownapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77C10E9B57E746241D8634D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFB26A0C832BAC8D72DAA414 /* Pods-Ownapp.debug.xcconfig */,
+				C74423D2353AF9CB1D0BE907 /* Pods-Ownapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C79A37622009722004D9C5A /* Build configuration list for PBXNativeTarget "Ownapp" */;
 			buildPhases = (
+				49B1F50D500D78EEFAA482EE /* [CP] Check Pods Manifest.lock */,
 				2C79A3602200971F004D9C5A /* Sources */,
 				2C79A3612200971F004D9C5A /* Frameworks */,
 				2C79A3622200971F004D9C5A /* Resources */,
+				072F120EFACE310A11ADAADE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,20 +243,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		072F120EFACE310A11ADAADE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ownapp/Pods-Ownapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ownapp/Pods-Ownapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49B1F50D500D78EEFAA482EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ownapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C79A3602200971F004D9C5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2C79A3842200C32B004D9C5A /* DataService.swift in Sources */,
+				2CD0FBCD22034B65005C5296 /* DroppablePin.swift in Sources */,
 				2C9F17D92201E773007A1E6E /* NavRootVC.swift in Sources */,
 				2C9F17DF2201FBF7007A1E6E /* WeatherVC.swift in Sources */,
 				2C9F17D52201E57A007A1E6E /* HomeVC.swift in Sources */,
+				2CD0FBD622045542005C5296 /* BorderedButton.swift in Sources */,
+				2CD0FBD1220398C5005C5296 /* WeatherView.swift in Sources */,
 				2C79A3862200C6AB004D9C5A /* MenuItemCell.swift in Sources */,
 				2C9F17DB2201EBDA007A1E6E /* NavRootVCDelegate.swift in Sources */,
 				2C79A3812200C2B6004D9C5A /* SidebarMenuVC.swift in Sources */,
 				2C79A38A2200E417004D9C5A /* MenuItem.swift in Sources */,
 				2C79A3682200971F004D9C5A /* AppDelegate.swift in Sources */,
+				2CD0FBD422039CC9005C5296 /* Constants.swift in Sources */,
 				2C79A3882200E3EB004D9C5A /* ContainerVC.swift in Sources */,
 				2C9F17DD2201F98C007A1E6E /* SidebarMenuVCDelegate.swift in Sources */,
 			);
@@ -356,11 +455,13 @@
 		};
 		2C79A37722009722004D9C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB26A0C832BAC8D72DAA414 /* Pods-Ownapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T89229LKW;
 				INFOPLIST_FILE = Ownapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,11 +475,13 @@
 		};
 		2C79A37822009722004D9C5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74423D2353AF9CB1D0BE907 /* Pods-Ownapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T89229LKW;
 				INFOPLIST_FILE = Ownapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
