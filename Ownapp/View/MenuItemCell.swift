@@ -17,7 +17,7 @@ class MenuItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         if selected {
-            self.layer.backgroundColor = UIColor.init(white: 0.3, alpha: 0.2).cgColor
+            self.layer.backgroundColor = UIColor.init(white: 1, alpha: 0.2).cgColor
         } else {
             self.layer.backgroundColor = UIColor.clear.cgColor
         }

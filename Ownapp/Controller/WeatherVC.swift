@@ -78,6 +78,18 @@ extension WeatherVC: MKMapViewDelegate {
         }
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let pinAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
+        pinAnnotation.image = UIImage(named: "pin")
+        pinAnnotation.centerOffset = CGPoint(x: 0, y: -pinAnnotation.image!.size.height / 2)
+        
+        return pinAnnotation
+    }
+    
     func centerMapOnSelectedLocation(with coordinate: CLLocationCoordinate2D) {
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 2, longitudinalMeters: regionRadius * 2)
         mapView.setRegion(coordinateRegion, animated: true)
